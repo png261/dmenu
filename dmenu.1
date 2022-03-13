@@ -6,6 +6,10 @@ dmenu \- dynamic menu
 .RB [ \-bfiv ]
 .RB [ \-l
 .IR lines ]
+.RB [ \-c
+.IR center ]
+.RB [ \-mw
+.IR min_width ]
 .RB [ \-m
 .IR monitor ]
 .RB [ \-p
@@ -47,6 +51,12 @@ which lists programs in the user's $PATH and runs the result in their $SHELL.
 .TP
 .B \-b
 dmenu appears at the bottom of the screen.
+.TP
+.BI \-c 
+dmenu appears at the center of the screen.
+.TP
+.BI \-mw
+defines min width when dmenu centered
 .TP
 .B \-f
 dmenu grabs the keyboard before reading stdin if not reading from a tty. This
