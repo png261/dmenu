@@ -41,6 +41,10 @@ static unsigned int border_width = 5;
 static int center = 0;                    /* -c option; centers dmenu on screen */
 static int min_width = 600;                    /* minimum width when centered */
 
+/* -h option; minimum height of a menu line */
+static unsigned int lineheight = 100;
+static unsigned int min_lineheight = 10;
+
 /*
  * Xresources preferences to load at startup
  */
@@ -49,6 +53,7 @@ ResourcePref resources[] = {
 	{ "dmenu.topbar",     	 INTEGER, &topbar },
 	{ "dmenu.center",     	 INTEGER, &center },
 	{ "dmenu.min_width",  	 INTEGER, &min_width },
+	{ "dmenu.lineheight",  	 INTEGER, &lineheight },
 	{ "dmenu.lines",		 INTEGER, &lines },
 	{ "dmenu.prompt",     	 STRING, &png_prompt },
 	{ "dmenu.highlight",   	 STRING, &highlight },
