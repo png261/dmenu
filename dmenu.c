@@ -953,7 +953,7 @@ setup(void)
 static void
 usage(void)
 {
-	fputs("usage: dmenu [-b fiv] [-c center] [-l lines] [-p prompt] [-fn font] [-m monitor]\n"
+	fputs("usage: dmenu [-b fiv] [-c center] [-mw min_width] [-l lines] [-p prompt] [-fn font] [-m monitor]\n"
 	      "             [-nhb color] [-nhf color] [-shb color] [-shf color] [-w windowid]\n", stderr);
 	exit(1);
 }
@@ -977,6 +977,8 @@ main(int argc, char *argv[])
 			topbar = 0;
 		else if (!strcmp(argv[i], "-c"))   /* centers dmenu on screen */
 			center = 1;
+		else if (!strcmp(argv[i], "-mw"))   /* min width when center on screen*/
+			min_width = (argv[++i] && atoi(argv[i]) > 0) ? atoi(argv[i]) : min_width;
 		else if (!strcmp(argv[i], "-f"))   /* grabs keyboard before reading stdin */
 			fast = 1;
 		else if (!strcmp(argv[i], "-i")) { /* case-insensitive item matching */
