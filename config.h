@@ -2,6 +2,7 @@
 /* Default settings; can be overriden by command line. */
 
 static int topbar = 1;                      /* -b  option; if 0, dmenu appears at bottom     */
+static int fuzzy = 1;                      /* -F  option; if 0, dmenu doesn't use fuzzy matching     */
 /* -fn option overrides fonts[0]; default X11 font or font set */
 static char font[] = "monospace:size=11";
 static const char *fonts[] = {
@@ -57,7 +58,7 @@ ResourcePref resources[] = {
 	{ "dmenu.lines",		 INTEGER, &lines },
 	{ "dmenu.prompt",     	 STRING, &png_prompt },
 	{ "dmenu.highlight",   	 STRING, &highlight },
-	{ "dmenh.border_width",  INTEGER, &border_width },
+	{ "dmenu.border_width",  INTEGER, &border_width },
 	{ "dwm.normfgcolor",	 STRING, &normfgcolor },
 	{ "dwm.normbgcolor",	 STRING, &normbgcolor },
 	{ "dwm.selfgcolor", 	 STRING, &selfgcolor },
