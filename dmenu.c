@@ -560,7 +560,7 @@ keypress(XKeyEvent *ev)
 
 	switch(ksym) {
 	default:
-	insert:
+insert:
 		if (!iscntrl(*buf))
 			insert(buf, len);
 		break;
